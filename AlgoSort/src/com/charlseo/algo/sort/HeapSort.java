@@ -47,13 +47,29 @@ public class HeapSort {
 	}
 	
 	public void sort (int[] array) {
-		buildMaxHeap(array);
+	/*	buildMaxHeap(array);
 		System.out.print("after build heap");
 		printArray(array);
 		int n = array.length - 1;
 		for (int i = n; i > 0; i--) {
 			exchange(array, 0, i);
 			n = n - 1;
+			maxHeapify(array, 0);
+		}
+	*/
+		
+		heapSize = array.length - 1;
+		
+		for (int i = heapSize / 2; i >= 0; i--) {
+			maxHeapify(array, i);
+		}
+		
+		System.out.println("Initial heapify");
+		printArray(array);
+		
+		for (int i = heapSize; i > 0; i--) {
+			exchange(array, 0, i);
+			heapSize--;
 			maxHeapify(array, 0);
 		}
 		
