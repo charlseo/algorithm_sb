@@ -1,7 +1,7 @@
 package com.charlseo.algo;
 
 import com.charlseo.algo.util.*;
-import com.charlseo.algo.sort.HeapSort;
+import com.charlseo.algo.sort.*;
 
 public class MainClass {
 
@@ -9,11 +9,19 @@ public class MainClass {
 		//@SuppressWarnings("unused")
 		RandomArrayGen randomArray = new RandomArrayGen(10);
 		int[] arrayList = randomArray.getArrayList();
-		HeapSort heapSort = new HeapSort();
+//		HeapSort heapSort = new HeapSort();
+//		
+//		heapSort.sort(arrayList);
+//		System.out.println("From Main");
+//		heapSort.printArray(arrayList);
 		
-		heapSort.sort(arrayList);
-		System.out.println("From Main");
-		heapSort.printArray(arrayList);
+		QuickSort qs = new QuickSort();
+		qs.sort(arrayList);
+		
+		
+		
 	}
+	
+	
 
 }

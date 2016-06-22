@@ -38,8 +38,8 @@ public class HeapSort {
 		if (largest != i) {
 			exchange (array, i, largest);
 			maxHeapify(array, largest);
-			System.out.println("after Swap");
-			System.out.println("Left:" + left + " Right: " + right);
+//			System.out.println("after Swap");
+//			System.out.println("Left:" + left + " Right: " + right);
 		}
 		
 		
@@ -80,6 +80,9 @@ public class HeapSort {
 			exchange(array, 0, i);
 			heapSize--;
 			maxHeapify(array, 0);
+			
+			System.out.println("Running:" );
+			printArray(array);
 		}
 		
 	}
