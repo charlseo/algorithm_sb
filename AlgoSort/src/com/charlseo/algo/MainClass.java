@@ -6,7 +6,7 @@ import com.charlseo.algo.sort.HeapSort;
 public class MainClass {
 
 	public static void main(String[] args) {
-		@SuppressWarnings("unused")
+		//@SuppressWarnings("unused")
 		RandomArrayGen randomArray = new RandomArrayGen(10);
 		int[] arrayList = randomArray.getArrayList();
 		HeapSort heapSort = new HeapSort();
